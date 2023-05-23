@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+.desplegable{
+    background-color: rgb(199, 194, 194);
+    border-radius: 4px;
+}
+.input{
+    background-color: rgb(199, 194, 194);
+    border-radius: 4px;
+    
+}
+.btn{
+    height: 30px;
+    width: 50px;
+    background-color: slategrey;
+    color: darkblue;
+   
+}
+.btn-search{
+    height: 20px;
+    width: 90px;
+    background-color: slategrey;
+    color: darkblue;
+}
+
+.btn-danger{
+    height: 30px;
+    width: 50px;
+    background-color: rgb(156, 153, 153);
+    border-radius: 3px;
+}
+
+.btn-guardar{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(4, 75, 7);
+    color: rgb(255, 255, 255);
+}

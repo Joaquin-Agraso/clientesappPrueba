@@ -1,0 +1,33 @@
+<p>alta-cliente works!</p>
+<p>APP alta Cliente</p>
+<h2>Alta cliente</h2>
+<p>
+  <span>Nombre:</span>
+  <input class="input" type="text" [(ngModel)]="cliente.nombre">
+</p>
+
+<p>
+  <span>CUIT:</span>
+  <input class="input" type="text" [(ngModel)]="cliente.cuit">
+</p>
+<p>
+  <span>Dirección:</span>
+  <input class="input" type="text" [(ngModel)]="cliente.direccion">
+</p>
+<p>
+  <span>Foto de perfil:</span>
+  <input type="file" (change)="capturarArchivo($event)">
+</p>
+<div class="fotoACargar" *ngIf="cliente.fotoPerfil">
+  <img class="fotoACargar" [src]="cliente.fotoPerfil" alt="Foto de perfil">
+</div>
+<p>
+  <span>Grupo:</span>
+  <select class="desplegable" [(ngModel)]="cliente.grupo">
+    <option *ngFor="let grupo of grupos" value="{{grupo.id}}">{{grupo.nombre}}</option>
+  </select>
+</p>
+<p>
+  <button class="btn btn-guardar" (click)="this.nuevoCliente()">Guardar</button>
+</p>
+

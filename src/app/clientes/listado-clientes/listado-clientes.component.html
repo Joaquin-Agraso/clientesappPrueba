@@ -1,0 +1,36 @@
+<h2>
+    Listado clientes
+</h2>
+  
+<div *ngIf="! clientes.length">No hay clientes por el momento</div>
+<span>
+  <input class="input" type="text" [(ngModel)]="entrada" (keyup.enter)="buscarCliente()">
+  <button class= "btn btn-search"  (click)="buscarCliente()">Buscar</button>
+</span>
+<div>
+  <article *ngFor="let cliente of resultado;let indice=index">
+    
+    <span>{{indice}}</span>
+    <span>{{cliente.nombre}}</span>
+    <span>{{cliente.cuit}}</span>
+    <span>{{cliente.direccion}}</span>
+    <span>{{cliente.grupo}}</span>
+  </article>
+</div>
+
+<div>
+    <article *ngFor="let cliente of clientes;let indice=index">
+      <span><img class="fotousuario" [src]="cliente.fotoPerfil" alt="Foto de perfil"></span>
+      <span>{{indice}}</span>
+      <span>{{cliente.nombre}}</span>
+      <span>{{cliente.cuit}}</span>
+      <span>{{cliente.direccion}}</span>
+      <span>{{cliente.grupo}}</span>
+      <span><button class="btn btn-danger" (click)="deleteCliente(indice)">❌</button></span>
+    </article>
+</div>
+<div>
+  <button class="btn "  (click)="ordenAscendente()">🠭</button>
+  <button class="btn "  (click)="ordenDescendente()">🠯</button>
+</div>
+
